@@ -1,6 +1,10 @@
 # django
 
+To run correctly django with postgres I's necessary clone git repository
+and execute docker-compose up
+Now the environment variables of django are customitzables, not the postgres because in settings.py file Django waits this values.
 
+```yaml
 version: "2" 
 services: 
   postgres:
@@ -31,3 +35,4 @@ services:
       - DJPASS=passadmin 
       - DJEMAIL="admin@admin.com" 
       - DJPORT=8000 
+```
