@@ -23,7 +23,7 @@ RUN echo "gunicorn==19.6.0" >> /root/requirements.txt
 RUN pip3 install psycopg2
 RUN pip install -r /root/requirements.txt
 RUN pip3 install psycopg2-binary
-RUN django-admin startproject ${PROJECT}
+RUN django-admin.py startproject ${PROJECT}
 WORKDIR /${PROJECT}
 COPY entry.sh /root
 RUN chmod +x /root/entry.sh
