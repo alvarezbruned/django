@@ -1,12 +1,14 @@
 # My Site
 # Version: 1.0
-FROM python:3
+FROM python:3.3
 # Install Python and Package Libraries
 RUN apt-get update && apt-get upgrade -y && apt-get autoremove && apt-get autoclean
+RUN pip install --upgrade pip
 RUN apt-get install -y \
     libffi-dev \
     libssl-dev \
-    default-libmysqlclient-dev \
+    #default-libmysqlclient-dev \
+    libmysqlclient-dev \
     libxml2-dev \
     libxslt-dev \
     libjpeg-dev \

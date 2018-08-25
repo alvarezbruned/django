@@ -14,9 +14,12 @@ services:
       - "5433:5432"
   django: 
     container_name: django_server 
-    image: albertalvarezbruned/django 
+#    image: albertalvarezbruned/django:1_5_2 
+    image: albertalvarezbruned/django:latest 
     stdin_open: true 
     tty: true 
+#    volumes: 
+#      - ./myproject1_5_2:/myproject #only if you clone repo 
     volumes: 
       - ./myproject:/myproject #only if you clone repo 
     ports: 
