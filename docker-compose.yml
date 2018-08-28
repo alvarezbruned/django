@@ -9,6 +9,7 @@ services:
       - POSTGRES_DB=postgres
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
+#      - ./db-data1_5_2:/var/lib/postgresql/data/pgdata
       - ./db-data:/var/lib/postgresql/data/pgdata
     ports:
       - "5433:5432"
@@ -18,9 +19,8 @@ services:
     image: albertalvarezbruned/django:latest 
     stdin_open: true 
     tty: true 
-#    volumes: 
-#      - ./myproject1_5_2:/myproject #only if you clone repo 
     volumes: 
+#      - ./myproject1_5_2:/myproject #only if you clone repo 
       - ./myproject:/myproject #only if you clone repo 
     ports: 
       - "8000:8000" 
